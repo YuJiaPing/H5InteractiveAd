@@ -30,7 +30,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const videoScene = document.querySelector("#videoScene");
 
     const playVideo = () => {
-        video.play();
+        video.play().catch(() => {
+            video.controls = true;
+        });
     }
 
     const pauseVideo = () => {
