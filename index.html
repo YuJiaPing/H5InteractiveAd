@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Banner</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
+</head>
+<body class="bg-gray-900 flex items-center justify-center h-screen">
+    <div id="ad-containe" class="w-[320px] h-[480px] bg-white relative overflow-hidden">
+
+        <!-- cut1 -->
+        <div id="scene1" class="relative">
+            <img class="absolute left-1/2 translate-x-[-50%] top-3 w-[100px]" src="./img/cut1_logo.png" alt="Performics">
+            <img class="w-full" src="./img/cut1_bg.png" alt="Performics">
+        </div>
+        <!-- cut2 -->
+        <a id="videoScene" href="https://www.performics.com/" target="_blank" class="bg-black absolute top-0 w-full h-full z-10">
+            <div class="video w-full absolute top-1/2 translate-y-[-50%]">
+                <video id="video" class="w-full h-full object-cover" muted controls>
+                    <source src="./img/Video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </a>
+        <!-- cut3 -->
+        <div id="scene2" class="flex flex-col bg-white absolute top-0 w-full h-full z-30">
+            <img class="relative left-1/2 translate-x-[-50%] top-9 w-[100px] z-[9]" src="./img/cut3_logo.png" alt="Performics">
+            <div class="swiper-carousel overflow-hidden relative h-full">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="https://www.performics.com/services/performance-media/" target="_blank"><img class="absolute bottom-0" src="./img/cut2_carousal1.png" alt="Performics01"></a>
+                        
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://www.hdfcbank.com/" target="_blank"><img class="absolute bottom-0" src="./img/cut2_carousal2.png" alt="Performics02"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://www.axisbank.com/" target="_blank"><img class="absolute bottom-0" src="./img/cut2_carousal3.png" alt="Performics03"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script type="module" src="./js/interactive.js">
+
+</script>
+</body>
+</html>
