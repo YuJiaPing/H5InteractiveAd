@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const viewportWidth = window.innerWidth;
 
-        const isDesktop = viewportWidth >= 568 && !navigator.userAgent.match(/Mobi/);
+        const isDesktop = window.matchMedia("(min-width: 568px)").matches;
 
         if(isDesktop){
             event.stopPropagation();
