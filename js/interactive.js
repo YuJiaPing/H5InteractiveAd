@@ -49,14 +49,20 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(videoScene);
 
     videoScene.addEventListener('click', (event) => {
-        event.stopPropagation();
-        event.preventDefault();
 
-        pauseVideo();
+        const viewportWidth = window.innerWidth;
 
-        setTimeout(() => {
-            window.open(videoScene.href, "_blank");
-        }, 0);
+        if(viewportWidth >= 658){
+            event.stopPropagation();
+            event.preventDefault();
+    
+            pauseVideo();
+    
+            setTimeout(() => {
+                window.open(videoScene.href, "_blank");
+            }, 0);
+        }
+
     })
 
 
